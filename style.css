@@ -63,12 +63,13 @@ body {
   letter-spacing: -0.2px;
 }
 .cta { margin: 0 0 32px 0; }
+
 .email-link {
   font-family: "Source Code Pro", monospace;
-  font-size: clamp(16px, 3.8vw, 22px);
+  font-size: 1em;            /* inherit parent size */
   color: #0a0a0a;
   text-decoration: underline;
-  text-underline-offset: 6px;
+  text-underline-offset: 0.35em;
 }
 
 /* Image */
@@ -99,5 +100,4 @@ body {
   .image-block { min-width: 0; }
 
   .lede { font-size: clamp(28px, 3.6vw, 40px); }
-  .email-link { font-size: clamp(16px, 2vw, 20px); }
 }
