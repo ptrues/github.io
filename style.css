@@ -21,6 +21,7 @@ body {
 .header-inner { display: flex; align-items: center; justify-content: space-between; }
 .site-title {
   margin: 0;
+  margin-bottom: 1.5rem; /* adjusts only the gap below the title */
   font-weight: 600;
   font-size: clamp(28px, 4vw, 48px);
   font-family: "Noto Sans", sans-serif;
