@@ -66,10 +66,10 @@ body {
 
 .email-link {
   font-family: "Source Code Pro", monospace;
-  font-size: 1em;            /* inherit parent size */
+  font-size: clamp(16px, 1.8vw, 22px); 
   color: #0a0a0a;
   text-decoration: underline;
-  text-underline-offset: 0.35em;
+  text-underline-offset: 6px;
 }
 
 /* Image */
