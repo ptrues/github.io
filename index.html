@@ -8,16 +8,23 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="site-header container">
-    <h1 class="site-title">P. R. Truesdell</h1>
-    <nav class="site-nav" aria-label="Social links">
-      <a href="#" target="_blank" rel="noopener">Instagram</a>
-      <a href="#" target="_blank" rel="noopener">Dribbble</a>
-    </nav>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="site-title">P. R. Truesdell</h1>
+      <button class="menu-toggle" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="site-nav" aria-label="Social links">
+        <a href="#" target="_blank" rel="noopener">Instagram</a>
+        <a href="#" target="_blank" rel="noopener">Dribbble</a>
+      </nav>
+    </div>
   </header>
 
-  <main class="container layout">
-    <section class="intro">
+  <main class="container content">
+    <div class="text-block">
       <p class="lede">
         P. R. Truesdell is a writer and cartographer from the United States, now based in Antwerp, where he digitizes antique maps and writes about urban planning. Portfolio coming soon.
       </p>
@@ -25,13 +32,15 @@
       <p class="cta">
         <a class="email-link" href="mailto:hello@example.com">Email me.</a>
       </p>
-    </section>
+    </div>
 
-    <figure class="hero-figure">
-      <img src="1153px-Joris_Hoefnagel_-_Map_of_Antwerp.jpg" alt="Map of Antwerp by Joris Hoefnagel, 1657" />
-    </figure>
+    <div class="image-block">
+      <figure class="hero-figure">
+        <img src="1153px-Joris_Hoefnagel_-_Map_of_Antwerp.jpg" alt="Map of Antwerp by Joris Hoefnagel, 1657" />
+      </figure>
+    </div>
   </main>
 
-  <footer class="container site-footer" aria-hidden="true"></footer>
+  <footer class="site-footer container" aria-hidden="true"></footer>
 </body>
 </html>
