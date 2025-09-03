@@ -23,7 +23,7 @@ body {
 
 /* Hamburger (mobile only) */
 .menu-toggle {
-  display: none; /* hidden on all views */
+  display: none; /* hidden on all viewports */
   flex-direction: column;
   justify-content: center;
   gap: 6px;
@@ -35,16 +35,15 @@ body {
 }
 .menu-toggle span { display: block; height: 2px; width: 100%; background: #0a0a0a; }
 
-/* Nav visibility */
-.site-nav { display: none; } /* hidden container on mobile */
+/* Nav visibility (mobile-first) */
+.site-nav { display: none; }  /* hidden on mobile */
 
-/* Nav link styling */
+/* Nav link styling (used if shown later) */
 .site-nav a {
   text-decoration: none;
   color: #0a0a0a;
   margin-left: 28px;
   font-size: 16px;
-  visibility: hidden; /* links kept in DOM but invisible */
 }
 
 /* Main layout */
@@ -64,8 +63,12 @@ body {
 
 /* Desktop breakpoint */
 @media (min-width: 900px) {
-  .site-nav { display: inline-flex; gap: 28px; } /* nav container visible */
-  .menu-toggle { display: none; }                /* hamburger hidden */
+  .site-nav {
+    display: inline-flex;   /* keep layout space */
+    gap: 28px;
+    visibility: hidden;     /* hide the buttons but keep them in the DOM */
+  }
+  .menu-toggle { display: none; } /* still hidden on desktop */
 
   /* two-column layout */
   .content { 
@@ -75,11 +78,9 @@ body {
     align-items: start;
   }
 
-  /* ensure columns size predictably */
   .text-block { min-width: 0; }
   .image-block { min-width: 0; }
 
-  /* desktop type scales */
   .lede { font-size: clamp(34px, 4.2vw, 44px); }
   .email-link { font-size: clamp(18px, 2.2vw, 24px); }
 }
