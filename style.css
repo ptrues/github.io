@@ -1,4 +1,4 @@
-/* Base reset */
+/* Base reset */ 
 *,
 *::before,
 *::after { box-sizing: border-box; }
@@ -23,7 +23,7 @@ body {
 
 /* Hamburger (mobile only) */
 .menu-toggle {
-  display: inline-flex;
+  display: none; /* hidden on all views */
   flex-direction: column;
   justify-content: center;
   gap: 6px;
@@ -35,16 +35,16 @@ body {
 }
 .menu-toggle span { display: block; height: 2px; width: 100%; background: #0a0a0a; }
 
-/* Nav visibility (mobile-first) */
-.site-nav { display: none; }                 /* hidden on mobile */
-.menu-toggle { display: inline-flex; }       /* hamburger visible on mobile */
+/* Nav visibility */
+.site-nav { display: none; } /* hidden container on mobile */
 
-/* Nav link styling (applies when visible on desktop) */
+/* Nav link styling */
 .site-nav a {
   text-decoration: none;
   color: #0a0a0a;
   margin-left: 28px;
   font-size: 16px;
+  visibility: hidden; /* links kept in DOM but invisible */
 }
 
 /* Main layout */
@@ -64,9 +64,8 @@ body {
 
 /* Desktop breakpoint */
 @media (min-width: 900px) {
-  /* show links, hide hamburger */
-  .site-nav { display: inline-flex; gap: 28px; }
-  .menu-toggle { display: none; }
+  .site-nav { display: inline-flex; gap: 28px; } /* nav container visible */
+  .menu-toggle { display: none; }                /* hamburger hidden */
 
   /* two-column layout */
   .content { 
