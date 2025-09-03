@@ -1,11 +1,11 @@
-/* Base reset */ 
+/* Base reset */
 *,
 *::before,
 *::after { box-sizing: border-box; }
 html, body { height: 100%; }
 body {
   margin: 0;
-  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  font-family: "Noto Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
   line-height: 1.45;
   color: #0a0a0a;
   background: #fff;
@@ -19,11 +19,16 @@ body {
 /* Header */
 .site-header { padding-block: 24px; }
 .header-inner { display: flex; align-items: center; justify-content: space-between; }
-.site-title { margin: 0; font-weight: 600; font-size: clamp(20px, 2.4vw, 28px); }
+.site-title {
+  margin: 0;
+  font-weight: 600;
+  font-size: clamp(20px, 2.4vw, 28px);
+  font-family: "Noto Sans", sans-serif;
+}
 
-/* Hamburger (mobile only) */
+/* Hamburger */
 .menu-toggle {
-  display: none; /* hidden on all viewports */
+  display: none;
   flex-direction: column;
   justify-content: center;
   gap: 6px;
@@ -35,45 +40,57 @@ body {
 }
 .menu-toggle span { display: block; height: 2px; width: 100%; background: #0a0a0a; }
 
-/* Nav visibility (mobile-first) */
-.site-nav { display: none; }  /* hidden on mobile */
-
-/* Nav link styling (used if shown later) */
+/* Nav visibility */
+.site-nav { display: none; }
 .site-nav a {
+  font-family: "Source Code Pro", monospace;
   text-decoration: none;
   color: #0a0a0a;
   margin-left: 28px;
-  font-size: 16px;
+  font-size: 15px;
+  visibility: hidden; /* keep but not visible */
 }
 
 /* Main layout */
 .content { display: grid; grid-template-columns: 1fr; gap: 28px; padding-block: 8px 64px; }
 
 /* Text */
-.lede { margin: 0 0 24px 0; font-size: clamp(28px, 7.2vw, 44px); font-weight: 600; letter-spacing: -0.2px; }
+.lede {
+  margin: 0 0 24px 0;
+  font-family: "Noto Sans", sans-serif;
+  font-size: clamp(24px, 6vw, 40px);
+  font-weight: 600;
+  letter-spacing: -0.2px;
+}
 .cta { margin: 0 0 32px 0; }
-.email-link { font-size: clamp(20px, 4.8vw, 28px); color: #0a0a0a; text-decoration: underline; text-underline-offset: 6px; }
+.email-link {
+  font-family: "Source Code Pro", monospace;
+  font-size: clamp(16px, 3.8vw, 22px);
+  color: #0a0a0a;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
 
 /* Image */
 .hero-figure { margin: 0; }
-.hero-figure img { display: block; width: 100%; height: auto; border: 1px solid #e8e8e8; background: #f7f5f4; }
+.hero-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid #e8e8e8;
+  background: #f7f5f4;
+}
 
 /* Footer spacer */
 .site-footer { height: 40px; }
 
 /* Desktop breakpoint */
 @media (min-width: 900px) {
-  .site-nav {
-    display: inline-flex;   /* keep layout space */
-    gap: 28px;
-    visibility: hidden;     /* hide the buttons but keep them in the DOM */
-  }
-  .menu-toggle { display: none; } /* still hidden on desktop */
+  .site-nav { display: inline-flex; gap: 28px; visibility: hidden; }
+  .menu-toggle { display: none; }
 
-  /* two-column layout */
-  .content { 
-    display: grid;
-    grid-template-columns: 1.1fr 1fr;   /* text left, image right */
+  .content {
+    grid-template-columns: 1.1fr 1fr;
     gap: clamp(28px, 5vw, 56px);
     align-items: start;
   }
@@ -81,6 +98,6 @@ body {
   .text-block { min-width: 0; }
   .image-block { min-width: 0; }
 
-  .lede { font-size: clamp(34px, 4.2vw, 44px); }
-  .email-link { font-size: clamp(18px, 2.2vw, 24px); }
+  .lede { font-size: clamp(28px, 3.6vw, 40px); }
+  .email-link { font-size: clamp(16px, 2vw, 20px); }
 }
