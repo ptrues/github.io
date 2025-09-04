@@ -119,6 +119,20 @@ html { scrollbar-gutter: stable; }
 /* Footer spacer */
 .site-footer { height: 40px; }
 
+/* Footer note: subtle, centered, and unobtrusive */
+.site-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-block: 18px;
+  color: #666666;
+  font-size: 0.9rem;
+}
+.site-footer .footer-note {
+  display: inline-block;
+  opacity: 0.9;
+}
+
 /* Hamburger menu overlay */
 .menu-overlay {
   display: flex;
