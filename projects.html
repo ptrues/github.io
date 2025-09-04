@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects – P. R. Truesdell</title>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/projects.css"> <!-- overrides only -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bigger-picture/dist/bigger-picture.min.css">
+  <link rel="icon" href="/assets/favicon-tight.ico" type="image/x-icon">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-tight-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-tight-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon-tight-180x180.png">
+
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner container">
+      <h1 class="site-title">
+        <a href="/" class="site-title-link">P. R. Truesdell</a>
+      </h1>
+      <button class="menu-toggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="site-nav">
+        <a href="/" class="home-link">Home</a>
+        <a href="/projects.html" aria-current="page">Projects</a>
+        <a href="/about-me.html">About Me</a>
+      </nav>
+      <div class="menu-overlay" id="menuOverlay">
+        <button class="close-overlay" aria-label="Close menu">&times;</button>
+        <nav class="overlay-nav">
+          <a href="/" class="home-link">Home</a>
+          <a href="/projects.html" aria-current="page">Projects</a>
+          <a href="/about-me.html">About Me</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+<!-- projects.html -->
+<main class="container">
+  <section class="projects">
+    <!-- Project Two -->
+    <article class="project">
+      <div class="proj-text">
+        <h2 class="proj-title"><a href="#">Why Amsterdam Doesn't Build Skyscrapers</a></h2>
+        <p class="proj-desc">I collaborated with Hoog to write a screenplay about an ambitious young urbanist on a quest to build skyscrapers in the Netherlands' most important city. The infotainment piece uses character-driven storytelling to explain the complex social and geographical factors that influence urban development in Amsterdam.</p>
+      </div>
+      <figure class="proj-media">
+        <!-- YouTube (privacy mode) -->
+        <a
+          href="https://www.youtube.com/watch?v=OmbdTG4jYi4"
+          data-bp
+          data-width="1920"
+          data-height="1080"
+          data-iframe="https://www.youtube-nocookie.com/embed/OmbdTG4jYi4?autoplay=1&playsinline=1"
+          aria-label="Play YouTube video"
+        >
+          <!-- Use a local thumbnail if you have one; otherwise this ytimg URL works -->
+          <img
+            src="https://i.ytimg.com/vi/OmbdTG4jYi4/hqdefault.jpg"
+            alt="YouTube video thumbnail"
+            width="480" height="360"
+            loading="lazy" decoding="async"
+          />
+        </a>
+      </figure>
+    </article>
+
+    <!-- Project One -->
+    <article class="project">
+      <div class="proj-text">
+        <h2 class="proj-title"><a href="#">Mapping U.S. Housing Affordability</a></h2>
+        <p class="proj-desc">I used R to compile data from the U.S. Census Bureau, creating a nationwide dataset 
+          on housing and population characteristics. From this, I calculated the ratio of median house price to median household income, 
+          a standard way to measure housing affordability. I mapped the results across ~32,000 communities, 
+          grouping them into clear affordability categories. To make the map easy to read, I used a 
+          dark background for contrast, a high-visibility color scale, and kept labels and legends simple. 
+          The result is a national map that shows housing affordability patterns clearly and at a glance.</p>
+      </div>
+      <figure class="proj-media">
+        <!-- Responsive image (single original size) -->
+        <a
+          href="/assets/Housing_Affordability_in_the_USA_simplified.png"
+          data-bp
+          data-img="/assets/Housing_Affordability_in_the_USA_simplified.png 3497w"
+          data-width="3497"
+          data-height="2465"
+          data-alt="Map showing housing affordability in the USA"
+          aria-label="Open full-size map"
+        >
+          <img
+            src="/assets/Housing_Affordability_in_the_USA_simplified.png"
+            alt="Map showing housing affordability in the USA"
+            width="3497" height="2465"
+            loading="lazy" decoding="async"
+          />
+        </a>
+      </figure>
+    </article>
+
+    <!-- Project Three: Responsive images -->
+    <article class="project">
+      <div class="proj-text">
+        <h2 class="proj-title"><a href="#">Redesigning a Historical Map</a></h2>
+        <p class="proj-desc">
+          I digitized and redesigned an archival map of Paris that showed plans for highways through the city center. 
+          The original map used similar colors and symbols for different features, 
+          which blurred distinctions and created clutter. I corrected this by designing a new symbology 
+          that establishes hierarchy between map features, improving clarity and usability. 
+          The redesigned version employs an accessible, colorblind-friendly palette based on  
+          <a href="https://sronpersonalpages.nl/~pault/" target="_blank" rel="noopener noreferrer">the work of Paul Tol</a>.
+        </p>
+      </div>
+      <div class="proj-media">
+        <figure>
+          <a
+            href="/assets/plan_de_paris.jpg"
+            data-bp
+            data-img="/assets/plan_de_paris.jpg 2000w"
+            data-width="2000"
+            data-height="1500"
+            data-alt="Plan de Paris"
+            aria-label="Open full-size image"
+          >
+            <img
+              src="/assets/plan_de_paris.jpg"
+              alt="Plan de Paris"
+              width="2000" height="1500"
+              loading="lazy" decoding="async"
+            />
+          </a>
+        </figure>
+        <figure>
+          <a
+            href="/assets/Paris_Motorways.png"
+            data-bp
+            data-img="/assets/Paris_Motorways.png 2000w"
+            data-width="2000"
+            data-height="1500"
+            data-alt="Paris motorways"
+            aria-label="Open full-size image"
+          >
+            <img
+              src="/assets/Paris_Motorways.png"
+              alt="Paris motorways"
+              width="2000" height="1500"
+              loading="lazy" decoding="async"
+            />
+          </a>
+        </figure>
+      </div>
+    </article>
+
+    <!-- Project Four: YouTube -->
+    <article class="project">
+      <div class="proj-text">
+        <h2 class="proj-title"><a href="#">Future Hoog Videos</a></h2>
+        <p class="proj-desc">Other collaborations with Hoog are in production now.</p>
+      </div>
+      <figure class="proj-media">
+        <a
+          href="https://www.youtube.com/watch?v=Y-x0efG1seA"
+          data-bp
+          data-width="1920"
+          data-height="1080"
+          data-iframe="https://www.youtube-nocookie.com/embed/Y-x0efG1seA?autoplay=1&playsinline=1"
+          aria-label="Play YouTube video"
+        >
+          <img
+            src="https://i.ytimg.com/vi/Y-x0efG1seA/hqdefault.jpg"
+            alt="YouTube video thumbnail"
+            width="480" height="360"
+            loading="lazy" decoding="async"
+          />
+        </a>
+      </figure>
+    </article>
+  </section>
+</main>
+
+  <footer class="site-footer"></footer>
+  <script src="/menu.js"></script>
+
+  <!-- loader + feature modules -->
+  <script type="module" src="./biggerpicture.js"></script>
+  <script type="module" src="./bp-inline.js"></script>
+  <script type="module" src="./bp-responsive.js"></script>
+  <script type="module" src="./bp-youtube.js"></script>
+
+
+</body>
+</html>

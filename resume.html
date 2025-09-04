@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me – P. R. Truesdell</title>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/about-me.css"> <!-- overrides only -->
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner container"> <!-- Add the container class -->
+      <h1 class="site-title"> <!-- Wrap site-title in an <h1> -->
+        <a href="/" class="site-title-link">P. R. Truesdell</a>
+      </h1>
+      <button class="menu-toggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="site-nav">
+        <a href="/" class="home-link">Home</a>
+        <a href="/projects.html">Projects</a>
+        <a href="/about-me.html" aria-current="page">About Me</a>
+      </nav>
+      <div class="menu-overlay" id="menuOverlay">
+        <button class="close-overlay" aria-label="Close menu">&times;</button>
+        <nav class="overlay-nav">
+          <a href="/" class="home-link">Home</a>
+          <a href="/projects.html">Projects</a>
+          <a href="/about-me.html" aria-current="page">About Me</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="about-me">
+      <ul class="job-list">
+        <li>
+          <h2>Job Title 1</h2>
+          <p>Company Name – Dates</p>
+          <p>Brief description of responsibilities and achievements.</p>
+        </li>
+        <li>
+          <h2>Job Title 2</h2>
+          <p>Company Name – Dates</p>
+          <p>Brief description of responsibilities and achievements.</p>
+        </li>
+        <li>
+          <h2>Job Title 3</h2>
+          <p>Company Name – Dates</p>
+          <p>Brief description of responsibilities and achievements.</p>
+        </li>
+      </ul>
+    </section>
+  </main>
+  <script src="/menu.js"></script>
+</body>
+</html>

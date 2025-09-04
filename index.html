@@ -22,25 +22,36 @@
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <h1 class="site-title">P. R. Truesdell</h1>
+      <h1 class="site-title">
+        <a href="/" class="site-title-link"> P. R. Truesdell</a>
+      </h1>
       
       <!-- Mobile hamburger (decorative; links stay hidden on mobile) -->
       <button class="menu-toggle" aria-label="Menu">
         <span></span><span></span><span></span>
       </button>
 
-      <nav class="site-nav" aria-label="Social links">
-        <a href="#" target="_blank" rel="noopener">Instagram</a>
-        <a href="#" target="_blank" rel="noopener">Dribbble</a>
+      <nav class="site-nav" aria-label="Site links">
+        <a href="/" aria-current="page">Home</a>
+        <a href="/projects.html">Projects</a>
+        <a href="/about-me.html">About Me</a>
       </nav>
+
+      <div class="menu-overlay" id="menuOverlay">
+  <button class="close-overlay" aria-label="Close menu">&times;</button>
+  <nav class="overlay-nav">
+    <a href="/" aria-current="page">Home</a>
+    <a href="/projects.html">Projects</a>
+    <a href="/about-me.html">About Me</a>
+  </nav>
+</div>
     </div>
   </header>
 
   <main class="container content">
     <div class="text-block">
       <p class="lede">
-       Hi! I'm an American writer and digital cartographer living in Antwerp. I use maps to tell stories about cities. Portfolio coming soon.
-      </p>
+       Hi! I'm an American writer and digital cartographer living in Antwerp. I use maps to tell stories. 
 
       <p class="cta">
         <a class="email-link" href="mailto:admin@prtruesdell.com">Email me.</a>
@@ -55,5 +66,6 @@
   </main>
 
   <footer class="site-footer container" aria-hidden="true"></footer>
+  <script src="menu.js"></script>
 </body>
 </html>

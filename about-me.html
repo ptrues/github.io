@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me – P. R. Truesdell</title>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/about-me.css"> <!-- overrides only -->
+  <link rel="icon" href="/assets/favicon-tight.ico" type="image/x-icon">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-tight-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-tight-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon-tight-180x180.png">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner container"> <!-- Add the container class -->
+      <h1 class="site-title"> <!-- Wrap site-title in an <h1> -->
+        <a href="/" class="site-title-link">P. R. Truesdell</a>
+      </h1>
+      <button class="menu-toggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="site-nav">
+        <a href="/" class="home-link">Home</a>
+        <a href="/projects.html">Projects</a>
+        <a href="/about-me.html" aria-current="page">About Me</a>
+      </nav>
+      <div class="menu-overlay" id="menuOverlay">
+        <button class="close-overlay" aria-label="Close menu">&times;</button>
+        <nav class="overlay-nav">
+          <a href="/" class="home-link">Home</a>
+          <a href="/projects.html">Projects</a>
+          <a href="/about-me.html" aria-current="page">About Me</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="container content">
+    <div class="text-block">
+      <section class="bio">
+        <p>I’m originally from North Carolina, which is where I attended a university that pretentiously calls itself 
+          a “public ivy.” There, I earned a bachelor's degree in geology with a second major in geography. 
+          I am credentializing myself further by studying for a master's in geographical information sciences (GIS) through a 
+          Dutch university.</p>
+      </section>
+
+      <section class="about-me">
+        <h2 class="work-experience-heading">WORK EXPERIENCE</h2>
+        <ul class="job-list">
+          <li>
+            <p>Freelance Writer and Mapmaker → 2025-Now</p>
+          </li>
+          <li>
+            <p>Health & Safety Bureaucrat → 2022-2025</p>
+          </li>
+          <li>
+            <p>Glorified Garbage Man → 2019-2022</p>
+          </li>
+          <li>
+            <p>Corporate Peon → 2018-2019</p>
+          </li>
+
+        </ul>
+        <p class="cta">
+          <a class="email-link" href="mailto:admin@prtruesdell.com">Email me.</a>
+        </p>
+      </section>
+    </div>
+
+    <div class="image-block">
+      <figure class="hero-figure">
+        <img src="/assets/Map_of_the_mountain_region_of_North_Carolina_(1941).jpg" alt="Map of the mountain region of North Carolina, 1941" />
+      </figure>
+    </div>
+  </main>
+  <script src="/menu.js"></script>
+</body>
+</html>

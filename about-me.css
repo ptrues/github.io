@@ -1,0 +1,63 @@
+/* resume.css */
+
+/* Page section layout */
+.resume {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-block: 2rem;
+}
+
+/* Job list */
+.job-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.job-list li {
+  font-family: "Source Code Pro", monospace;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.job-list h2 {
+  font-size: 1.2rem;
+  margin: 0 0 0.5rem 0;
+}
+
+.job-list p {
+  margin: 0;
+}
+
+/* About me section */
+.about-me .cta {
+  margin-top: 2rem; /* Add space between the section and the link */
+}
+
+.about-me h2 {
+  font-family: "Source Code Pro", monospace;
+  font-size: clamp(16px, 1.8vw, 20px);
+  color: #0a0a0a;
+  text-decoration: none;
+}
+
+.about-me .job-list p {
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 300; /* Narrow version */
+}
+
+/* Work Experience heading */
+.work-experience-heading {
+  font-family: "Source Code Pro", monospace;
+  font-size: clamp(16px, 1.8vw, 20px);
+  color: #0a0a0a;
+  text-decoration: none;
+  text-align: left; /* Ensure left alignment */
+  font-weight: 400; /* Not bolded */
+  margin-left: 0; /* Align heading with other text */
+  margin-top: 1.5rem; /* Add space between the biography and the heading */
+}
