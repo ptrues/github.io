@@ -18,7 +18,7 @@
 /* Two columns and alternating order on desktop */
 @media (min-width: 900px) {
   .project {
-    grid-template-columns: 1.1fr 1fr;      /* text | media */
+    grid-template-columns: 1fr 1fr;      /* text | media */
     gap: clamp(2rem, 5vw, 4rem);
     align-items: center;
   }
@@ -34,8 +34,6 @@
   font-weight: 600;
   letter-spacing: -0.2px;
 }
-.proj-title a { color: inherit; text-decoration: none; }
-.proj-title a:hover { text-decoration: underline; }
 
 .proj-desc {
   margin: 0;
@@ -74,3 +72,11 @@
 .proj-media a:hover::after {
   opacity: 1; /* Show overlay on hover */
 }
+
+/* Specific link styling for code-like appearance */
+.code-link {
+  font-family: "Source Code Pro", monospace;
+  color: #0a0a0a;
+  text-decoration: none;
+}
+.code-link:hover { text-decoration: underline; }

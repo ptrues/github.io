@@ -13,8 +13,31 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-/* Containers */
-.container { width: min(1120px, 92vw); margin-inline: auto; }
+/* Prevent horizontal shift when a vertical scrollbar appears */
+html { scrollbar-gutter: stable; }
+
+/* Fluid scale variables: use a shared vw slope so title and lede scale together.
+   Adjust --fluid-slope or multipliers to tune relative sizes. */
+:root {
+  --fluid-slope: 4vw;
+  --site-title-min: 28px;
+  --site-title-max: 48px;
+  --lede-min: 20px;
+  --lede-max: 24px;
+  --lede-mult: 0.9; /* lede slope = 0.9 * fluid-slope for proportional scaling */
+}
+
+/* Containers
+   Use an explicit max-width and consistent horizontal padding so
+   page content (including the header) lines up identically across pages.
+*/
+.container {
+  max-width: 1120px;     /* fixed maximum content width */
+  width: 100%;
+  margin-inline: auto;   /* center within viewport */
+  padding-inline: clamp(12px, 3.5vw, 28px); /* consistent inner gutter */
+  box-sizing: border-box;
+}
 
 /* Header */
 .site-header { padding-block: 36px; }
@@ -22,8 +45,8 @@ body {
 .site-title {
   margin: 0;
   font-weight: 600;
-  font-size: clamp(28px, 4vw, 48px);
   font-family: "Noto Sans", sans-serif;
+  font-size: clamp(var(--site-title-min), var(--fluid-slope), var(--site-title-max));
 }
 
 .site-title-link {
@@ -63,9 +86,9 @@ body {
 .lede {
   margin: 0 0 24px 0;
   font-family: "Noto Sans", sans-serif;
-  font-size: clamp(20px, 1.8vw, 28px);
   font-weight: 400;
   letter-spacing: -0.2px;
+  font-size: clamp(var(--lede-min), calc(var(--fluid-slope) * var(--lede-mult)), var(--lede-max));
 }
 .cta { margin: 0 0 32px 0; }
 
@@ -86,6 +109,8 @@ body {
 .hero-figure img {
   display: block;
   width: 100%;
+  max-width: 900px; /* allow larger display for higher-resolution hero images */
+  margin-inline: auto; /* center when narrower than column */
   height: auto;
   border: 1px solid #e8e8e8;
   background: #f7f5f4;
@@ -169,7 +194,8 @@ body {
   .menu-toggle { display: none; }
 
   .content {
-    grid-template-columns: 1.1fr 1fr;
+    /* Make the image column slightly wider so the hero can render larger */
+    grid-template-columns: 1fr 1.2fr;
     gap: clamp(28px, 5vw, 56px);
     align-items: start;
   }
@@ -177,12 +203,12 @@ body {
   .text-block { min-width: 0; }
   .image-block { min-width: 0; }
 
-  .lede { font-size: clamp(20px, 3.6vw, 28px); }
+  .lede { font-size: clamp(var(--lede-min), calc(var(--fluid-slope) * var(--lede-mult)), var(--lede-max)); }
 }
 
 .lede a {
   font-family: "Noto Sans", monospace;
-  font-size: clamp(20px, 3.6vw, 28px);
+  font-size: clamp(var(--lede-min), calc(var(--fluid-slope) * var(--lede-mult)), var(--lede-max));
   color: #0a0a0a;
   text-decoration: none;
   text-underline-offset: 6px;

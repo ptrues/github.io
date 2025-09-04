@@ -23,7 +23,7 @@
   <header class="site-header">
     <div class="container header-inner">
       <h1 class="site-title">
-        <a href="/" class="site-title-link"> P. R. Truesdell</a>
+        <a href="/" class="site-title-link">P. R. Truesdell</a>
       </h1>
       
       <!-- Mobile hamburger (decorative; links stay hidden on mobile) -->
@@ -60,12 +60,22 @@
 
     <div class="image-block">
       <figure class="hero-figure">
-        <img src="1153px-Joris_Hoefnagel_-_Map_of_Antwerp.jpg" alt="Map of Antwerp by Joris Hoefnagel, 1657" />
+        <img
+          src="/assets/Joris_Hoefnagel_Map_of_Antwerp.jpg"
+          alt="Map of Antwerp by Joris Hoefnagel, 1657"
+          width="3728" height="2328"
+          loading="lazy" decoding="async"
+        />
       </figure>
     </div>
   </main>
 
   <footer class="site-footer container" aria-hidden="true"></footer>
   <script src="menu.js"></script>
+  <!-- loader + feature modules for bigger-picture responsive images -->
+  <script type="module" src="./biggerpicture.js"></script>
+  <script type="module" src="./bp-inline.js"></script>
+  <script type="module" src="./bp-responsive.js"></script>
+  <script type="module" src="./bp-youtube.js"></script>
 </body>
 </html>

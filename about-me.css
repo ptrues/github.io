@@ -50,6 +50,14 @@
   font-weight: 300; /* Narrow version */
 }
 
+/* Hard-coded biography paragraph size to match project descriptions */
+.bio p {
+  margin: 0 0 1rem 0;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 18px; /* fixed size to match projects' description max */
+  line-height: 1.6;
+}
+
 /* Work Experience heading */
 .work-experience-heading {
   font-family: "Source Code Pro", monospace;
@@ -59,5 +67,5 @@
   text-align: left; /* Ensure left alignment */
   font-weight: 400; /* Not bolded */
   margin-left: 0; /* Align heading with other text */
-  margin-top: 1.5rem; /* Add space between the biography and the heading */
+  margin-top: 2.5rem; /* Add space between the biography and the heading */
 }
