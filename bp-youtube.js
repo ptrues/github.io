@@ -1,4 +1,4 @@
-import { ensureLib, instantiateCandidate, safeRedirect } from './biggerpicture.js';
+import { ensureLib, instantiateCandidate, safeRedirect } from '/biggerpicture.js';
 
 let ytOverlay = null;
 

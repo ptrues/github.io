@@ -1,4 +1,4 @@
-import { ensureLib, instantiateCandidate } from './biggerpicture.js';
+import { ensureLib, instantiateCandidate } from '/biggerpicture.js';
 
 window.createInlineGallery = async function (containerId, items = [], options = {}) {
   const container = document.getElementById(containerId);
